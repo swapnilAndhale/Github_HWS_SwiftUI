@@ -8,20 +8,28 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var blurAmount = 0.0 {
-        didSet {
-            print("New value is \(blurAmount)")
-        }
-    }
+    @State private var image: Image?
+    @State private var filterIntensity = 0.5
+    
     var body: some View {
-        VStack {
-            Text("Hello, world")
-                .blur(radius: blurAmount)
-            
-            Slider(value: $blurAmount, in: 0...20)
-            
-            Button("Ramdom Blur") {
-                blurAmount = Double.random(in: 0...20)
+        NavigationView {
+            VStack {
+                ZStack {
+                    Rectangle()
+                        .fill(.secondary)
+                    
+                    Text("Tap to select a picture")
+                        .foregroundColor(.white)
+                        .font(.headline)
+                    
+                    image?
+                        .resizable()
+                        .scaledToFit()
+                }
+                .onTapGesture {
+                     //select an image
+                }
+                
             }
         }
     }
