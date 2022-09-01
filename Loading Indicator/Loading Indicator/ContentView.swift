@@ -13,11 +13,14 @@ struct ContentView: View {
     var body: some View {
         HStack {
             ForEach(0...4, id: \.self) { index in
-                Circle()
+                Rectangle()
                     .frame(width: 10, height: 10)
                     .foregroundColor(.green)
-                    .scaleEffect(self.isLoading ? 0 : 1)
-                    .animation(Animation.linear(duration: 0.6).repeatForever().delay(0.2 * Double(index)))
+                    .scaleEffect(isLoading ? 0.9 : 1)
+                    .offset(x: isLoading ? 250 : -210 , y: 0)
+                    .animation(Animation.easeInOut(duration: 2).repeatForever(autoreverses: false).delay(0.2 * Double(index)))
+                
+                    
             }
         }
         .onAppear() {
