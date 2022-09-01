@@ -20,8 +20,8 @@ struct ContentView: View {
                     .offset(x: isLoading ? 240 : -200 , y: 0)
                     .animation(Animation.easeInOut(duration: 2).repeatForever(autoreverses: false).delay(0.2 * Double(index)))
                 
-                    
             }
+            
         }
         .onAppear() {
             self.isLoading = true
