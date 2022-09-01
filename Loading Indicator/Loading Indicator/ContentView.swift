@@ -17,7 +17,7 @@ struct ContentView: View {
                     .frame(width: 10, height: 10)
                     .foregroundColor(.green)
                     .scaleEffect(isLoading ? 0.9 : 1)
-                    .offset(x: isLoading ? 250 : -210 , y: 0)
+                    .offset(x: isLoading ? 240 : -200 , y: 0)
                     .animation(Animation.easeInOut(duration: 2).repeatForever(autoreverses: false).delay(0.2 * Double(index)))
                 
                     
