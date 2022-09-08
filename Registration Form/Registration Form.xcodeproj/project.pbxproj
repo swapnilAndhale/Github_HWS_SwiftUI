@@ -11,6 +11,7 @@
 		55BB515628CA4F740026C818 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BB515528CA4F740026C818 /* ContentView.swift */; };
 		55BB515828CA4F750026C818 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55BB515728CA4F750026C818 /* Assets.xcassets */; };
 		55BB515B28CA4F750026C818 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55BB515A28CA4F750026C818 /* Preview Assets.xcassets */; };
+		55BB516228CA4FF30026C818 /* UserRegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BB516128CA4FF30026C818 /* UserRegistrationViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		55BB515528CA4F740026C818 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		55BB515728CA4F750026C818 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		55BB515A28CA4F750026C818 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		55BB516128CA4FF30026C818 /* UserRegistrationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRegistrationViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				55BB515328CA4F740026C818 /* Registration_FormApp.swift */,
 				55BB515528CA4F740026C818 /* ContentView.swift */,
+				55BB516128CA4FF30026C818 /* UserRegistrationViewModel.swift */,
 				55BB515728CA4F750026C818 /* Assets.xcassets */,
 				55BB515928CA4F750026C818 /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55BB516228CA4FF30026C818 /* UserRegistrationViewModel.swift in Sources */,
 				55BB515628CA4F740026C818 /* ContentView.swift in Sources */,
 				55BB515428CA4F740026C818 /* Registration_FormApp.swift in Sources */,
 			);
