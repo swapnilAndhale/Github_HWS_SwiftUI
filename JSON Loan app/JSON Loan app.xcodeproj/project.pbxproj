@@ -14,6 +14,7 @@
 		5593EEC728CB89020045D0A9 /* Loan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5593EEC628CB89010045D0A9 /* Loan.swift */; };
 		5593EEC928CB8C240045D0A9 /* LoanStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5593EEC828CB8C240045D0A9 /* LoanStore.swift */; };
 		5593EECB28CB98000045D0A9 /* LoanCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5593EECA28CB98000045D0A9 /* LoanCellView.swift */; };
+		5593EED028CB9B480045D0A9 /* LoanFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5593EECF28CB9B480045D0A9 /* LoanFilterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		5593EEC628CB89010045D0A9 /* Loan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loan.swift; sourceTree = "<group>"; };
 		5593EEC828CB8C240045D0A9 /* LoanStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanStore.swift; sourceTree = "<group>"; };
 		5593EECA28CB98000045D0A9 /* LoanCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanCellView.swift; sourceTree = "<group>"; };
+		5593EECF28CB9B480045D0A9 /* LoanFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanFilterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			children = (
 				5593EEBA28CB4C6E0045D0A9 /* ContentView.swift */,
 				5593EECA28CB98000045D0A9 /* LoanCellView.swift */,
+				5593EECF28CB9B480045D0A9 /* LoanFilterView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -172,6 +175,7 @@
 			files = (
 				5593EEBB28CB4C6E0045D0A9 /* ContentView.swift in Sources */,
 				5593EEC928CB8C240045D0A9 /* LoanStore.swift in Sources */,
+				5593EED028CB9B480045D0A9 /* LoanFilterView.swift in Sources */,
 				5593EECB28CB98000045D0A9 /* LoanCellView.swift in Sources */,
 				5593EEC728CB89020045D0A9 /* Loan.swift in Sources */,
 				5593EEB928CB4C6E0045D0A9 /* JSON_Loan_appApp.swift in Sources */,
