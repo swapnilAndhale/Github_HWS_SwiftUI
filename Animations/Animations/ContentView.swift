@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/*
 struct CornerRotateModifier: ViewModifier {
     let amount: Double
     let anchor: UnitPoint
@@ -27,15 +28,15 @@ extension AnyTransition {
     }
 }
 
-
+*/
 struct ContentView: View {
     
     
     let letters = Array("Hello, Swapnil")
-    @State private var animationAmount = 0.0
+    //@State private var animationAmount = 0.0
     @State private var enable = false
     @State private var dragAmount = CGSize.zero
-    @State private var isShowingYellow = false
+    //@State private var isShowingYellow = false
     
     var body: some View {
        
