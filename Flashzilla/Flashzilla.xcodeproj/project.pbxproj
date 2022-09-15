@@ -13,6 +13,7 @@
 		5567E8C128D1BBB900C8C10B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5567E8C028D1BBB900C8C10B /* ContentView.swift */; };
 		5567E8C328D1BBBA00C8C10B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5567E8C228D1BBBA00C8C10B /* Assets.xcassets */; };
 		5567E8C628D1BBBA00C8C10B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5567E8C528D1BBBA00C8C10B /* Preview Assets.xcassets */; };
+		558B1C6828D37A3500A0E21A /* EditCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558B1C6728D37A3500A0E21A /* EditCards.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		5567E8C028D1BBB900C8C10B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5567E8C228D1BBBA00C8C10B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5567E8C528D1BBBA00C8C10B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		558B1C6728D37A3500A0E21A /* EditCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCards.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				5567E8C028D1BBB900C8C10B /* ContentView.swift */,
 				5544F66128D2428F00506DE9 /* CardView.swift */,
 				5544F65F28D2417E00506DE9 /* Card.swift */,
+				558B1C6728D37A3500A0E21A /* EditCards.swift */,
 				5567E8C228D1BBBA00C8C10B /* Assets.xcassets */,
 				5567E8C428D1BBBA00C8C10B /* Preview Content */,
 			);
@@ -146,6 +149,7 @@
 				5567E8C128D1BBB900C8C10B /* ContentView.swift in Sources */,
 				5544F66028D2417E00506DE9 /* Card.swift in Sources */,
 				5544F66228D2428F00506DE9 /* CardView.swift in Sources */,
+				558B1C6828D37A3500A0E21A /* EditCards.swift in Sources */,
 				5567E8BF28D1BBB900C8C10B /* FlashzillaApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
