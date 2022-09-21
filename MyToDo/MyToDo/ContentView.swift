@@ -6,9 +6,12 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct ContentView: View {
-    @State var todoItems: [ToDoItem] = []
+    
+    @FetchRequest(entity: ToDoItem.entity(), sortDescriptors: [ NSSortDescriptor(keyPath: \ToDoItem.priorityNum, ascending: false)])
+    private var todoItems: FetchedResults<ToDoItem>
     
     @State private var newItemName: String = ""
     @State private var newItemPriority: Priority = .normal
@@ -57,7 +60,7 @@ struct ContentView: View {
                         self.showNewTask = false
                     }
                 
-                NewToDoView(isShow: $showNewTask, todoItems: $todoItems, name: "", priority: .normal)
+                NewToDoView(isShow: $showNewTask, name: "", priority: .normal)
                     .transition(.move(edge: .bottom))
                     .animation(.interpolatingSpring(stiffness: 200.0, damping: 25.0, initialVelocity: 10.0))
             }
@@ -88,35 +91,5 @@ struct NoDataView: View {
         Image("welcome")
             .resizable()
             .scaledToFit()
-    }
-}
-
-struct ToDoListRow: View {
-    @ObservedObject var todoItem: ToDoItem
-    
-    var body: some View {
-        Toggle(isOn: self.$todoItem.isComplete) {
-            HStack {
-                Text(self.todoItem.name)
-                    .strikethrough(self.todoItem.isComplete, color: .black)
-                    .bold()
-                    .animation(.default)
-                
-                Spacer()
-                
-                Circle()
-                    .frame(width: 10,height: 10)
-                    .foregroundColor(self.color(for: self.todoItem.priority))
-            }
-        }
-       // .toggleStyle(CheckboxStyle())
-    }
-    
-    private func color(for priority: Priority) -> Color {
-        switch priority {
-        case .high: return .red
-        case .normal: return .orange
-        case .low: return .green
-        }
     }
 }

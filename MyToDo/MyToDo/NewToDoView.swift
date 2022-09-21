@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct NewToDoView: View {
+    @Environment(\.managedObjectContext) var moc
     @Binding var isShow: Bool
-    @Binding var todoItems: [ToDoItem]
     
     @State var name: String
     @State var priority: Priority
@@ -34,8 +34,9 @@ struct NewToDoView: View {
                             .font(.headline)
                     }
                 }
-                TextField("Enter the task Discription", text: $name, onEditingChanged: { (editingChanged) in
-                    self.isEditing = editingChanged })
+                TextField("Enter the task discription", text: $name, onEditingChanged: { (editingChanged) in
+                    self.isEditing = editingChanged
+                })
                 .padding()
                 .background(Color(.systemGray6))
                 .cornerRadius(8)
@@ -106,14 +107,23 @@ struct NewToDoView: View {
     }
     
     private func addTask(name: String, priority: Priority, isComplete: Bool = false) {
-        let task = ToDoItem(name: name, priority: priority, isComplete: isComplete)
-        todoItems.append(task)
+        let task = ToDoItem(context: moc)
+        task.id = UUID()
+        task.name = name
+        task.priority = priority
+        task.isComplete = isComplete
+        
+        do {
+            try moc.save()
+        } catch {
+            print(error)
+        }
     }
 }
 
 
 struct NewToDoView_Previews: PreviewProvider {
     static var previews: some View {
-        NewToDoView(isShow: .constant(true), todoItems: .constant([]), name: "", priority: .normal)
+        NewToDoView(isShow: .constant(true), name: "", priority: .normal)
     }
 }
