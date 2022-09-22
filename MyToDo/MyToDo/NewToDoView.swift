@@ -34,7 +34,7 @@ struct NewToDoView: View {
                             .font(.headline)
                     }
                 }
-                TextField("Enter the task discription", text: $name, onEditingChanged: { (editingChanged) in
+                TextField("Enter the task discription", text: $name, onEditingChanged: { editingChanged in
                     self.isEditing = editingChanged
                 })
                 .padding()
