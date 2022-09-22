@@ -13,9 +13,11 @@ struct ContentView: View {
     @FetchRequest(entity: ToDoItem.entity(), sortDescriptors: [ NSSortDescriptor(keyPath: \ToDoItem.priorityNum, ascending: false)])
     private var todoItems: FetchedResults<ToDoItem>
     
+    @Environment(\.managedObjectContext) var moc
+    
     @State private var newItemName: String = ""
     @State private var newItemPriority: Priority = .normal
-       
+    
     @State private var showNewTask = false
     
     var body: some View {
@@ -35,12 +37,13 @@ struct ContentView: View {
                     }
                 }
                 .padding()
-                
                 List {
                     ForEach(todoItems) { todoItem in
                         ToDoListRow(todoItem: todoItem)
                     }
+                    .onDelete(perform: deleteTask)
                 }
+                
                 
             }
             .rotation3DEffect(Angle(degrees: showNewTask ? 5 : 0), axis: (x: 1, y: 0, z: 0))
@@ -63,6 +66,22 @@ struct ContentView: View {
                 NewToDoView(isShow: $showNewTask, name: "", priority: .normal)
                     .transition(.move(edge: .bottom))
                     .animation(.interpolatingSpring(stiffness: 200.0, damping: 25.0, initialVelocity: 10.0))
+            }
+        }
+        .accentColor(.yellow)
+    }
+    
+    private func deleteTask(indexSet: IndexSet) {
+        for index in indexSet {
+            let itemToDelete = todoItems[index]
+            moc.delete(itemToDelete)
+        }
+        
+        DispatchQueue.main.async {
+            do {
+                try moc.save()
+            } catch {
+                print(error)
             }
         }
     }
