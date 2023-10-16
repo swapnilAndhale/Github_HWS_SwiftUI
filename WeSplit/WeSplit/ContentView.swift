@@ -28,10 +28,10 @@ struct ContentView: View {
     }
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             Form {
                 Section {
-                    TextField("Amount", value: $checkAmount, format: .currency(code: Locale.current.currencyCode ?? "INR"))
+                    TextField("Amount", value: $checkAmount, format: .currency(code: Locale.current.currency?.identifier ?? "INR"))
                         .keyboardType(.decimalPad)
                         .focused($amountIsFocused)
                     
@@ -54,7 +54,7 @@ struct ContentView: View {
                 }
                 
                 Section {
-                    Text(totalPerPerson, format: .currency(code: Locale.current.currencyCode ?? "INR"))
+                    Text(totalPerPerson, format: .currency(code: Locale.current.currency?.identifier ?? "INR"))
                 }
         
             }
